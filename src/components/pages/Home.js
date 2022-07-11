@@ -1,4 +1,4 @@
-import { React, useEffect, useState, useContext, useRef } from "react";
+import { React, useEffect, useContext, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import qs from "qs";
@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 
 import {
   setCategoryId,
-  setCurrentPage,
+  setPageCount,
   setFilters,
 } from "../../redux/slices/filterSlice";
 import Categories from "../Categories";
@@ -35,7 +35,7 @@ const Home = () => {
   };
 
   const onChangePage = (number) => {
-    dispatch(setCurrentPage(number));
+    dispatch(setPageCount(number));
   };
 
   const getPizzas = async () => {
