@@ -139,7 +139,7 @@ body {
       margin-right: 10px;
       path {
         stroke: $black;
-        strokeWidth: 1.9;
+        stroke-width: 1.9;
       }
     }
   }
@@ -229,6 +229,10 @@ body {
           path:first-of-type {
             display: none;
           }
+        }
+
+        &:disabled {
+          opacity: 0.4;
         }
       }
 
@@ -333,7 +337,7 @@ body {
           margin-right: 12px;
           path {
             fill: transparent;
-            strokeWidth: 2;
+            stroke-width: 2;
           }
         }
       }

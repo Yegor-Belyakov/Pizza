@@ -34,7 +34,8 @@ const CartItem = ({ id, title, type, size, price, count, imageUrl}) => {
             <p>{type}, {size} см.</p>
           </div>
           <div className="cart__item-count">
-            <div
+            <button
+            disabled={count === 1}
               onClick={onClickMinus}
               className="button button--outline button--circle cart__item-count-minus"
             >
@@ -54,7 +55,7 @@ const CartItem = ({ id, title, type, size, price, count, imageUrl}) => {
                   fill="#EB5A1E"
                 ></path>
               </svg>
-              </div>
+              </button>
             <b>{count}</b>
             <div 
             onClick={onClickPlus}
